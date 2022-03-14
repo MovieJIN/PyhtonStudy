@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = '/common/showtimes/iframeTheater.aspx?areacode=01&theatercode=0013&date=20220314'
+url = 'http://www.cgv.co.kr/common/showtimes/iframeTheater.aspx?areacode=01&theatercode=0013&date=20220314'
 html = requests.get(url)
 # print(html.text)
 soup = BeautifulSoup(html.text, 'html.parser')
