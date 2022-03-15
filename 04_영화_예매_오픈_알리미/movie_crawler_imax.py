@@ -20,10 +20,10 @@ def do_function() :
         #스케쥴러 멈추기(작성 안하면 30초마다 계속 메세지 옴)
         sched.pause()
     
-    #안열리면 메세지 굳이 필요없으니 주석처리
-    else: 
-        # print('imax 예매가 아직 열리지 않았습니다.')
-        bot.sendMessage(chat_id=5211769165, text = 'imax 예매가 아직 열리지 않았습니다.')
+    #안열리면 메세지 굳이 필요없으니 주석처리해도 됨
+    # else: 
+    #     # print('imax 예매가 아직 열리지 않았습니다.')
+    #     bot.sendMessage(chat_id=5211769165, text = 'imax 예매가 아직 열리지 않았습니다.')
  
 sched = BlockingScheduler()
 sched.add_job(do_function, 'interval', seconds=30)
