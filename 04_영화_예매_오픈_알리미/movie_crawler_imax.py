@@ -21,9 +21,9 @@ def do_function() :
         sched.pause()
     
     #안열리면 메세지 굳이 필요없으니 주석처리
-    # else: 
-    #     # print('imax 예매가 아직 열리지 않았습니다.')
-    #     bot.sendMessage(chat_id=5211769165, text = 'imax 예매가 아직 열리지 않았습니다.')
+    else: 
+        # print('imax 예매가 아직 열리지 않았습니다.')
+        bot.sendMessage(chat_id=5211769165, text = 'imax 예매가 아직 열리지 않았습니다.')
  
 sched = BlockingScheduler()
 sched.add_job(do_function, 'interval', seconds=30)
